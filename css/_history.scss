@@ -1,0 +1,87 @@
+@import "./mixins";
+@import "./variables";
+
+
+.history {
+    @include centralize($direction: column);
+    padding: 9.6rem 0; 
+    &__timeline {
+        margin-top: 64px;
+        @include centralize($direction: column);
+        gap: 8px;
+        width: calc(930px + 40px);
+        position: relative;
+        align-items: flex-start;
+    }
+    &__text {
+        font-size: 1.6rem !important;
+        line-height: 22px !important;
+        width: calc(335px + (40px / 2));
+    }
+    &__card-odd {
+        @include centralize;
+        justify-content: flex-end;
+        .history__date {
+            @include centralize($direction: row-reverse);
+        }
+        .text {
+            text-align: left;
+            padding-left: 18px;
+        }
+        .history__year {
+            &::after {
+                left: -30px;
+            }
+        }
+        .translate{
+            &::after {
+                left: -25px;
+                width: 17px;
+            }
+        }
+    }
+    &__card-even {
+        @include centralize;
+        justify-content: flex-start;
+        .history__date {
+            @include centralize($direction: row);
+        }
+        .text {
+            text-align: right;
+            padding-right: 18px;
+        }
+    }
+    &__year {
+        font-size: 2.4rem;
+        color: $white;
+        background-color: $blue;
+        padding: 8px 24px;
+        border-radius: 10px;
+        font-family: $poppins;
+        font-weight: 500;
+        position: relative;
+        &::after {
+            content: "";
+            width: 20px;
+            height: 5px;
+            border-radius: 10px;
+            top: calc(50% - 2.5px);
+            right: -30px;
+            background-color: $blue;
+            position: absolute;
+        }
+    }
+}
+
+.card {
+    width: 100%;
+}
+
+.line-center {
+    border-radius: 10px;
+    position: absolute;
+    left: calc(50% - 2.5px);
+    width: 5px;
+    height: 100%;
+    background-color: $blue;
+}

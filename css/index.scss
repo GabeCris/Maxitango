@@ -1,0 +1,80 @@
+@import "./variables";
+@import "./mixins";
+@import "./home";
+@import "./gallery";
+@import "./contacts";
+@import "./shops";
+@import "./history";
+@import "./footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    position: relative;
+}
+
+a,
+h1,
+h2 {
+    font-family: $poppins;
+    font-weight: 600;
+    color: $white;
+    text-decoration: none;
+}
+
+p {
+    color: $white;
+    font-family: $inter;
+}
+
+.title {
+    @include title_page;
+    // &::after{
+    //     @include border_title;
+    // }
+}
+
+.text {
+    @include text_page;
+}
+
+.button {
+    @include button;
+}
+
+.divider {
+    width: 100%;
+    transform: translateY(2px);
+}
+
+.back {
+    @include centralize;
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    z-index: 15;
+    margin: 15px;
+    background-color: $white;
+    border-radius: 50%;
+    border: 3px solid $blue;
+    bottom: 0;
+    right: 0;
+    transition: $transition;
+    img {
+        transform: rotate(-90deg) translateX(2px);
+    }
+    &:hover {
+        transition: $transition;
+        transform: translateY(-5px);
+    }
+}

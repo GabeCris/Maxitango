@@ -1,0 +1,36 @@
+@import "./mixins";
+@import "./variables";
+
+.contacts {
+    position: relative;
+    z-index: 4;
+    &__container {
+        background-color: $blue;
+        padding: 32px $padding;
+        @include centralize($direction: row, $justify: space-around);
+
+        p {
+            margin-top: 16px;
+            max-width: 534px;
+            width: 100%;
+            text-align: start;
+            color: $white;
+            font-weight: 600;
+        }
+    }
+    &__icon {
+        margin-right: 32px;
+        @include icon;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__icons{
+        @include centralize;
+        gap: 32px;
+    }
+    
+    .title {
+        color: $white;
+    }
+}

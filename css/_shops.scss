@@ -1,0 +1,63 @@
+@import "./mixins";
+@import "./variables";
+
+.shops {
+    padding-top: 96px;
+    @include centralize($direction: column);
+    &__text {
+        margin: 64px 0;
+        width: 640px;
+    }
+
+    &__cards {
+        @include centralize;
+        max-width: 700px;
+        position: relative;
+        gap: 64px 96px;
+        flex-wrap: wrap;
+    }
+    
+    &__card {
+        @include card_title;
+        transition: $transition;
+        width: 269px;
+        height: 162px;
+        position: relative;
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        &::before {
+            content: "Ver Localização";
+            @include centralize;
+            color: $white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all $transition;
+            font-size: 1.8rem;
+            font-family: $inter;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.78) 100%
+            );
+            opacity: 0;
+            transform: scale(1.05);
+        }
+        
+        &:hover::before{
+            transform: scale(1);
+            opacity: 1;
+        }
+        &:hover{
+            transition: $transition;
+            transform: scale(1.05);
+        }
+    }
+}

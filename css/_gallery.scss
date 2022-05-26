@@ -1,0 +1,68 @@
+@import "./mixins";
+@import "./variables";
+$gap: 16px;
+$square: 285px;
+
+.gallery {
+    @include centralize($justify: center, $direction: column);
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    padding: 9.6rem;
+    &__text {
+        margin: 64px 0 16px 0;
+        max-width: 850px;
+        width: 100%;
+    }
+    &__container {
+        padding: 0 96px 0px 96px;
+        margin-top: 64px;
+
+    }
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(4, (285px / 1.5));
+        grid-template-rows: repeat(3, (285px / 1.5));
+        gap: 16px;
+        .img {
+            width: 100%;
+            cursor: pointer;
+            height: 100%;
+            // object-fit: cover;
+            border-radius: 20px;
+            transition: $transition;
+            &:hover{
+                transition: $transition;
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .image1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .image2 {
+        grid-area: 1 / 2 / 2 / 4;
+    }
+    .image3 {
+        grid-area: 1 / 4 / 2 / 5;
+    }
+    .image4 {
+        grid-area: 2 / 1 / 4 / 2;
+    }
+    .image5 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .image6 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    .image7 {
+        grid-area: 2 / 3 / 4 / 4;
+    }
+    .image8 {
+        grid-area: 2 / 4 / 3 / 5;
+    }
+    .image9 {
+        grid-area: 3 / 4 / 4 / 5;
+    }
+}

@@ -1,13 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MaxiTango</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
-</body>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MaxiTango</title>
+        <link
+            rel="shortcut icon"
+            href="./assets/favicon_maxitango.svg"
+            type="image/x-icon"
+        />
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="script.js" defer></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"
+            integrity="sha512-qk0XupXlge1h9I63+bC7K8850xgWnUjTgSNkfLnsqc7dWdx4031UbKjKs2cuRxsNXymkSjyzSCiryVouU74zkg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+    </head>
+    <body>
+        <a href="#">
+            <div class="back">
+                <img src="./assets/icons/see_more.svg" alt="Voltar ao topo" />
+            </div>
+        </a>
+        <section class="homepage">
+            <header class="header">
+                <a href="#">
+                    <img
+                        src="./assets/logo_maxitango.svg"
+                        alt="Logo da Maxitango"
+                        class="header__logo"
+                    />
+                </a>
+                <nav class="header__navigation">
+                    <ul>
+                        <li>
+                            <a href="#gallery" class="header__link">Galeria</a>
+                        </li>
+                        <li>
+                            <a href="#shops" class="header__link">Lojas</a>
+                        </li>
+                        <li>
+                            <a href="#history" class="header__link">Sobre</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="hero">
+                <section class="hero__title rellax" data-rellax-speed="-6">
+                    <h1>Conheça o seu melhor centro de compras</h1>
+                    <div class="hero__icons">
+                        <div
+                            class="hero__icon__container"
+                            data-message="Acessar facebook"
+                        >
+                        <a href="https://www.facebook.com/lojas.maxitangoPG" target="_blank">
+                            <img
+                                src="./assets/icons/facebook.svg"
+                                alt="ir para o facebook da maxitango"
+                                class="hero__icon"
+                            />
+                        </a>
+                        </div>
+                        
+                        <div
+                            class="hero__icon__container"
+                            data-message="Acessar instagram"
+                        >
+                        <a href="https://www.instagram.com/maxitango_confeccoes/" target="_blank">
+                            <img
+                                src="./assets/icons/instagram.svg"
+                                alt="ir para o instagram da maxitango"
+                                class="hero__icon"
+                            />
+                        </a>
+                        </div>
+                        <div
+                            class="hero__icon__container"
+                            data-message="Acessar whatsapp"
+                        >
+                        <a href="#" target="_blank">
+                            <img
+                                src="./assets/icons/whatsapp.svg"
+                                alt="ir para o whatsappda maxitango"
+                                class="hero__icon"
+                            />
+                        </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <img src="/assets/bottom.svg" class="bottom" />
+        </section>
+        <section class="gallery" id="gallery">
+            <h1 class="gallery__title title">Galeria</h1>
+            <div class="gallery__container">
+                <a href="https://www.instagram.com/maxitango_confeccoes/" target="_blank">
+                    <div class="parent">
+                        <div class="image1 img"> 
+                            <img src="./assets/gallery/image1.png" alt="" class="img">
+                        </div>
+                        <div class="image2 img"> 
+                            <img src="./assets/gallery/image2.png" alt="" class="img">
+                        </div>
+                        <div class="image3 img">
+                            <img src="./assets/gallery/image3.png" alt="" class="img"> </div>
+                        <div class="image4 img"> 
+                            <img src="./assets/gallery/image4.png" alt="" class="img">
+                        </div>
+                        <div class="image5 img"> 
+                            <img src="./assets/gallery/image5.png" alt="" class="img">
+                        </div>
+                        <div class="image6 img"> 
+                            <img src="./assets/gallery/image6.png" alt="" class="img">
+                        </div>
+                        <div class="image7 img"> 
+                            <img src="./assets/gallery/image7.png" alt="" class="img">
+                        </div>
+                        <div class="image8 img"> 
+                            <img src="./assets/gallery/image8.png" alt="" class="img">
+                        </div>
+                        <div class="image9 img"> 
+                            <img src="./assets/gallery/image9.png" alt="" class="img">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <p class="gallery__text text">
+            Em nossas cinco lojas atendemos a diversos públicos,
+            disponibilizando confecções, calçados, brinquedos e artigos
+            esportivos.
+        </p>
+            <a href="https://www.instagram.com/maxitango_confeccoes/" target="_blank">
+
+                <button class="gallery__button button">
+                    Ver Mais
+                    <img src="./assets/icons/see_more.svg" alt="Ver mais" />
+                </button>
+
+            </a>
+        </section>
+        <section class="contacts">
+            <img src="./assets/divider.svg" class="divider" />
+            <div class="contacts__container">
+                <div class="contacts__content">
+                    <h1 class="contacts__title title">Contatos</h1>
+                    <p class="text">
+                        Chame-nos nas nossas redes sociais e fique de olhos nos
+                        produtos postados
+                    </p>
+                </div>
+                <div class="contacts__icons icons">
+                    <a href="https://www.facebook.com/lojas.maxitangoPG" target="_blank">
+                        <img
+                            src="./assets/icons/facebook.svg"
+                            alt="ir para o facebook da maxitango"
+                            class="contacts__icon"
+                        />
+
+                    </a>
+                    <a href="https://www.instagram.com/maxitango_confeccoes/" target="_blank">
+                        <img
+                            src="./assets/icons/instagram.svg"
+                            alt="ir para o instagram da maxitango"
+                            class="contacts__icon"
+                        />
+
+                    </a>
+                    <a href="#">
+                        <img
+                            src="./assets/icons/whatsapp.svg"
+                            alt="ir para o whatsappda maxitango"
+                            class="contacts__icon"
+                        />
+
+                    </a>
+                </div>
+            </div>
+            <img
+                src="./assets/divider_bottom.svg"
+                class="divider"
+                style="transform: translateY(-2px)"
+            />
+        </section>
+        <section class="shops" id="shops">
+            <h1 class="shops__title title">Nossas Lojas</h1>
+            <p class="shops__text text">
+                Com 5 lojas em Ponta Grossa, você tem sempre a certeza de
+                encontrar uma Maxitango próxima a você:
+            </p>
+            <div class="shops__cards">
+                <div class="shops__card" data-title="Maxi Esportes">
+                    <img
+                        src="./assets/shops/maxi_sports.svg"
+                        alt="Localização Maxi Esportes"
+                    />
+                </div>
+                <div class="shops__card" data-title="Maxi Bebê">
+                    <img
+                        src="./assets/shops/maxi_baby.svg"
+                        alt="Localização Maxi Bebê"
+                        class="shops__card"
+                    />
+                </div>
+                <div class="shops__card" data-title="Maxi Calçados">
+                    <img
+                        src="./assets/shops/maxi_shoes.svg"
+                        alt="Localização Maxi Calçados"
+                        class="shops__card"
+                    />
+                </div>
+                <div class="shops__card" data-title="Maxitango">
+                    <img
+                        src="./assets/shops/maxitango.svg"
+                        alt="Localização Maxitango"
+                        class="shops__card"
+                    />
+                </div>
+            </div>
+        </section>
+        <section class="history" id="history">
+            <h1 class="history__title title">Nossa história</h1>
+            <div class="history__timeline">
+                <div class="history__card-even card" id="year-1">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Casa Tango é fundada em Ponta Grossa atuando com
+                            armarinhos
+                        </p>
+                        <h3 class="history__year">1934</h3>
+                    </div>
+                </div>
+                <div class="history__card-odd card" id="year-2">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Nasce a Tanguinho, especializada em confecções
+                            infantis
+                        </p>
+                        <h3 class="history__year">1974</h3>
+                    </div>
+                </div>
+                <div class="history__card-even card" id="year-3">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Inaugurada mais uma Tango, no ramo de confecções,
+                            calçados, materiais esportivos e escolares.
+                        </p>
+                        <h3 class="history__year">1978</h3>
+                    </div>
+                </div>
+                <div class="history__card-odd card" id="year-4">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Inaugura a Maxi, comercializando confecções,
+                            calçados, brinquedos, cama, mesa, banho, artigos
+                            esportivos e presentes.
+                        </p>
+                        <h3 class="history__year">1985</h3>
+                    </div>
+                </div>
+                <div class="history__card-even card" id="year-5">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Casas Maxi e Tango se unem, transformando-se na
+                            Maxitango
+                        </p>
+                        <h3 class="history__year">1986</h3>
+                    </div>
+                </div>
+                <div class="history__card-odd card" id="year-6">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            A filial foi redirecionada, dando origma a Maxi
+                            Calçados.
+                        </p>
+                        <h3 class="history__year">1994</h3>
+                    </div>
+                </div>
+                <div class="history__card-even card" id="year-7">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Maxi Esportes é inaugurado, especializada em artigos
+                            esportivos e acessórios em geral, assim como uma
+                            nova loja no Shopping Total.
+                        </p>
+                        <h3 class="history__year">2001</h3>
+                    </div>
+                </div>
+                <div class="history__card-odd card" id="year-8">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Inaugurou mais uma filial da Maxi Calçados e Maxi
+                            Esportes no Shopping Palladium em Ponta Grossa.
+                        </p>
+                        <h3 class="history__year translate">2003</h3>
+                    </div>
+                </div>
+                <div class="history__card-even card" id="year-9">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Lançamento da loja virtual para vendas pela
+                            internet.
+                        </p>
+                        <h3 class="history__year">2012</h3>
+                    </div>
+                </div>
+                <div class="history__card-odd card" id="year-10">
+                    <div class="history__date">
+                        <p class="history__text text">
+                            Inauguração da nova Maxi Esportes na Avenida Vicente
+                            Machado.
+                        </p>
+                        <h3 class="history__year">2015</h3>
+                    </div>
+                </div>
+                <div class="line-center"></div>
+            </div>
+        </section>
+        <section class="footer">
+            <img src="./assets/divider.svg" alt="" class="divider" />
+            <div class="footer__container">
+                <img
+                    src="./assets/logo_maxitango.svg"
+                    alt="Logo da Maxitango"
+                />
+                <div class="footer__contacts">
+                    <h1 class="footer__title title">Contatos</h1>
+                    <div class="footer__icons icons">
+                        <a href="https://www.facebook.com/lojas.maxitangoPG" target="_blank">
+                        <img
+                            src="./assets/icons/facebook.svg"
+                            alt="ir para o facebook da maxitango"
+                            class="footer__icon"
+                        />
+                        </a>
+                        <a href="https://www.instagram.com/maxitango_confeccoes/" target="_blank">
+                        <img
+                            src="./assets/icons/instagram.svg"
+                            alt="ir para o instagram da maxitango"
+                            class="footer__icon"
+                        />
+                        </a>
+                        <a href="#" target="_blank">
+                        <img
+                            src="./assets/icons/whatsapp.svg"
+                            alt="ir para o whatsappda maxitango"
+                            class="footer__icon"
+                        />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

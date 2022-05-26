@@ -1,0 +1,24 @@
+@import "./mixins";
+@import "./variables";
+
+.footer{
+    &__container{
+        background-color: $blue;
+        @include centralize($direction: row, $justify: space-around);
+        padding: 0px $padding 32px $padding;
+    }
+    &__title{
+        color: $white !important;
+    }
+    &__contacts{
+        @include centralize($direction: column);
+        gap: 16px;
+    }
+    &__icons{
+        @include centralize($direction: row);
+        gap: 32px;
+    }
+    &__icon{
+        @include icon;
+    }
+}
