@@ -24,8 +24,28 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body>
+        <section class="modal">
+            <img src="./assets/icons/close.svg" alt="Fechar modal" class="close">
+            <div class="modal__map" data-title="Maxi Esportes">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.2995002833744!2d-50.160238671224754!3d-25.095157999999977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81a411a9e4c31%3A0xdd31d17cdc378b9a!2sMaxitango!5e0!3m2!1spt-BR!2sbr!4v1653569999702!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="modal__iframe">
+                </iframe>
+                <img
+                    src="./assets/shops/maxi_sports.svg"
+                    alt="Localização Maxi Esportes"
+                    class="modal__image"
+                />
+                <!-- <p>
+                    Av. Vicente Machado, 363. 
+                </p>
+                <br>
+                <p>
+                    (42) 3220-4250
+                </p> -->
+            </div>
+        </section>
         <a href="#">
             <div class="back">
                 <img src="./assets/icons/see_more.svg" alt="Voltar ao topo" />
@@ -87,7 +107,7 @@
                             class="hero__icon__container"
                             data-message="Acessar whatsapp"
                         >
-                        <a href="#" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=554284032258" target="_blank">
                             <img
                                 src="./assets/icons/whatsapp.svg"
                                 alt="ir para o whatsappda maxitango"
@@ -105,30 +125,30 @@
             <div class="gallery__container">
                 <a href="https://www.instagram.com/maxitango_confeccoes/" target="_blank">
                     <div class="parent">
-                        <div class="image1 img"> 
+                        <div class="image1"> 
                             <img src="./assets/gallery/image1.png" alt="" class="img">
                         </div>
-                        <div class="image2 img"> 
+                        <div class="image2"> 
                             <img src="./assets/gallery/image2.png" alt="" class="img">
                         </div>
-                        <div class="image3 img">
+                        <div class="image3">
                             <img src="./assets/gallery/image3.png" alt="" class="img"> </div>
-                        <div class="image4 img"> 
+                        <div class="image4"> 
                             <img src="./assets/gallery/image4.png" alt="" class="img">
                         </div>
-                        <div class="image5 img"> 
+                        <div class="image5"> 
                             <img src="./assets/gallery/image5.png" alt="" class="img">
                         </div>
-                        <div class="image6 img"> 
+                        <div class="image6"> 
                             <img src="./assets/gallery/image6.png" alt="" class="img">
                         </div>
-                        <div class="image7 img"> 
+                        <div class="image7"> 
                             <img src="./assets/gallery/image7.png" alt="" class="img">
                         </div>
-                        <div class="image8 img"> 
+                        <div class="image8"> 
                             <img src="./assets/gallery/image8.png" alt="" class="img">
                         </div>
-                        <div class="image9 img"> 
+                        <div class="image9"> 
                             <img src="./assets/gallery/image9.png" alt="" class="img">
                         </div>
                     </div>
@@ -176,7 +196,7 @@
                         />
 
                     </a>
-                    <a href="#">
+                    <a href="https://api.whatsapp.com/send?phone=554284032258" target="_blank">
                         <img
                             src="./assets/icons/whatsapp.svg"
                             alt="ir para o whatsappda maxitango"
@@ -199,27 +219,28 @@
                 encontrar uma Maxitango próxima a você:
             </p>
             <div class="shops__cards">
-                <div class="shops__card" data-title="Maxi Esportes">
+                <div class="shops__card" data-title="Maxi Esportes" id="shop1">
                     <img
                         src="./assets/shops/maxi_sports.svg"
                         alt="Localização Maxi Esportes"
+                        class="shops__card"
                     />
                 </div>
-                <div class="shops__card" data-title="Maxi Bebê">
+                <div class="shops__card" data-title="Maxi Bebê" id="shop2">
                     <img
                         src="./assets/shops/maxi_baby.svg"
                         alt="Localização Maxi Bebê"
                         class="shops__card"
                     />
                 </div>
-                <div class="shops__card" data-title="Maxi Calçados">
+                <div class="shops__card" data-title="Maxi Calçados" id="shop3">
                     <img
                         src="./assets/shops/maxi_shoes.svg"
                         alt="Localização Maxi Calçados"
                         class="shops__card"
                     />
                 </div>
-                <div class="shops__card" data-title="Maxitango">
+                <div class="shops__card" data-title="Maxitango" id="shop4">
                     <img
                         src="./assets/shops/maxitango.svg"
                         alt="Localização Maxitango"
@@ -350,7 +371,7 @@
                             class="footer__icon"
                         />
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=554284032258" target="_blank">
                         <img
                             src="./assets/icons/whatsapp.svg"
                             alt="ir para o whatsappda maxitango"

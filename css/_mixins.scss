@@ -119,15 +119,20 @@
     }
 }
 
-@mixin card_title {
+@mixin card_title ($font-size: 1.8rem, $bottom: true, $translate: 15px){
     &::after {
         content: attr(data-title);
         display: block;
         position: absolute;
-        transform: translateY(15px) translateX(15px);
-        bottom: 0;
+        transform: translateY($translate) translateX(15px);
+        @if $bottom{
+            bottom: 0;
+        } @else{
+            top: 0;
+        }
+        
         right: 0;
-        font-size: 1.8rem;
+        font-size: $font-size;
         font-weight: bold;
         border-radius: 10px;
         font-family: $poppins;
