@@ -1,0 +1,35 @@
+@import "./mixins";
+@import "./variables";
+
+.hamburger{
+    transform: translateY(-200vh);
+    @include centralize($direction: column, $justify: center);
+    gap: 48px;
+    position: fixed;
+    width: 100%;
+    z-index: 40;
+    height: 100vh;
+    background-color: $blue;
+    transition: $transition;
+   
+    &__close{
+        position: absolute;
+        margin: 40px;
+        right: 0;
+        top:0;
+    }
+    &__link{
+        font-size: 2.4rem;
+    }
+    &-active{
+        transition: $transition;
+        transform: translate(0);
+    }
+    label{
+        font-size: 2.4rem;
+        color: $white;
+        font-family: $poppins;
+        cursor: pointer;
+        font-weight: 600;
+    }
+}

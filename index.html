@@ -26,10 +26,27 @@
         ></script>
         <script src="https://unpkg.com/scrollreveal"></script>
     </head>
-    <body>
+    <body id="body">
+        <input type="checkbox" id="check">
+        <section class="hamburger">
+            <div class="hamburger__close">
+                <img src="./assets/icons/close_white.svg" alt="">
+            </div>
+                <a href="#gallery" class="hamburger__link">Galeria</a>
+                <a href="#contacts" class="hamburger__link">Contatos</a>
+                <a href="#shops" class="hamburger__link">Lojas</a>
+                <a href="#history" class="hamburger__link">Sobre</a>                
+                <a href="#" class="hamburger__link">
+                    <label for="check">Mudar tema</label>
+                </a>
+        </section>
         <section class="modal">
             <img src="./assets/icons/close.svg" alt="Fechar modal" class="close">
             <div class="modal__map" data-title="Maxi Esportes">
+                <div class="modal__loading">
+                    <div class="loading">
+                    </div>
+                </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.2995002833744!2d-50.160238671224754!3d-25.095157999999977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e81a411a9e4c31%3A0xdd31d17cdc378b9a!2sMaxitango!5e0!3m2!1spt-BR!2sbr!4v1653569999702!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="modal__iframe">
                 </iframe>   
                 <img
@@ -46,11 +63,6 @@
                 </p> -->
             </div>
         </section>
-        <a href="#">
-            <div class="back">
-                <img src="./assets/icons/see_more.svg" alt="Voltar ao topo" />
-            </div>
-        </a>
         <section class="homepage">
             <header class="header">
                 <a href="#">
@@ -71,8 +83,14 @@
                         <li>
                             <a href="#history" class="header__link">Sobre</a>
                         </li>
+                        <li>
+                            <label for="check">
+                                <img src="./assets/icons/theme.svg" alt="Mudar tema" class="theme">
+                            </label>
+                        </li>
                     </ul>
                 </nav>
+                <img src="./assets/icons/menu.svg" alt="" class="header__hamburger">
             </header>
             <main class="hero">
                 <section class="hero__title rellax" data-rellax-speed="-6">
@@ -118,7 +136,8 @@
                     </div>
                 </section>
             </main>
-            <img src="./assets/bottom.svg" class="bottom" />
+            <img src="./assets/bottom-light.svg" class="bottom" />
+            <img src="./assets/bottom-mobile-light.svg" class="bottom-mobile" />
         </section>
         <section class="gallery" id="gallery">
             <h1 class="gallery__title title">Galeria</h1>
@@ -169,13 +188,13 @@
 
             </a>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <img src="./assets/divider.svg" class="divider" />
             <div class="contacts__container">
                 <div class="contacts__content">
-                    <h1 class="contacts__title title">Contatos</h1>
+                    <h1 class="contacts__title title no-item">Contatos</h1>
                     <p class="text">
-                        Chame-nos nas nossas redes sociais e fique de olhos nos
+                        Chame-nos nas nossas redes sociais e fique de olho nos
                         produtos postados
                     </p>
                 </div>
@@ -353,9 +372,10 @@
                 <img
                     src="./assets/logo_maxitango.svg"
                     alt="Logo da Maxitango"
+                    class="footer__logo"
                 />
                 <div class="footer__contacts">
-                    <h1 class="footer__title title">Contatos</h1>
+                    <h1 class="footer__title title no-item">Contatos</h1>
                     <div class="footer__icons icons">
                         <a href="https://www.facebook.com/lojas.maxitangoPG" target="_blank">
                         <img

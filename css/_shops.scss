@@ -3,10 +3,30 @@
 
 .shops {
     padding-top: 96px;
+    background-color: $theme-background;
+    @include mobile{
+        scroll-margin-top: 16px;
+        padding: 0 $padding_mobile;
+        padding-top: 4.8rem;
+    }
+    @include tablet{
+        scroll-margin-top: 32px;
+        padding: 0 $padding_tablet;
+        padding-top: 4.8rem;
+        
+    }
     @include centralize($direction: column);
     &__text {
         margin: 64px 0;
         width: 640px;
+        @include mobile{
+            margin: 2.4rem;
+            width: 100%;
+        }
+        @include tablet{
+            margin: 2.4rem;
+            width: 80%;
+        }
     }
 
     &__cards {
@@ -15,6 +35,14 @@
         position: relative;
         gap: 64px 96px;
         flex-wrap: wrap;
+        @include mobile{
+            max-width: 100%;
+            gap: 4.8rem;
+        }
+        @include tablet{
+            max-width: 100%;
+            gap: 4.8rem;
+        }
     }
     
     &__card {

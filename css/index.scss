@@ -7,19 +7,28 @@
 @import "./history";
 @import "./footer";
 @import "./modal";
+@import "./hamburguer";
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 html {
     scroll-behavior: smooth;
     font-size: 10px;
+    overflow-x: hidden;
+}
+
+input {
+    display: none;
 }
 
 body {
+    overflow-x: hidden;
     position: relative;
 }
 
@@ -42,10 +51,24 @@ p {
     // &::after{
     //     @include border_title;
     // }
+    @include mobile {
+        font-size: 2.4rem;
+    }
+    @include tablet {
+        font-size: 2.8rem;
+    }
 }
 
 .text {
     @include text_page;
+    @include mobile {
+        font-size: 1.4rem;
+        line-height: 17px;
+    }
+    @include tablet {
+        font-size: 1.8rem;
+        line-height: 25px;
+    }
 }
 
 .button {
@@ -53,8 +76,11 @@ p {
 }
 
 .divider {
-    width: 100%;
+    width: 100vw;
     transform: translateY(2px);
+    @include mobile {
+        transform: translateY(3px);
+    }
 }
 
 .back {
@@ -76,5 +102,71 @@ p {
     &:hover {
         transition: $transition;
         transform: translateY(-5px);
+    }
+    @include mobile {
+        // transform: scale(0.6);
+        margin: 10px;
+        &:hover{
+            transform: translateY(0px);
+        }
+    }
+}
+
+#check:checked {
+    ~ .gallery,
+    ~ .contacts,
+    ~ .shops,
+    ~ .history,
+    ~ .footer,
+    ~ .modal {
+        .title {
+            color: $white;
+            &::after {
+                background-color: $white;
+            }
+        }
+        .no-item {
+            &::after {
+                background-color: $blue;
+            }
+        }
+        .text {
+            color: $gray;
+        }
+        .line-center {
+            background-color: $white;
+        }
+        .history__year {
+            &::after {
+                background-color: $white;
+            }
+        }
+        .button {
+            background-color: $dark;
+            color: $white;
+            border-color: $white;
+            img {
+                filter: brightness(100);
+            }
+            &:hover {
+                background-color: $white;
+                color: $dark;
+                img {
+                    filter: brightness(50%);
+                }
+            }
+        }
+        @include backgroundChange($theme: $dark);
+    }
+    ~ a {
+        .back {
+            background-color: $dark;
+            border-color: $white;
+        }
+    }
+    ~ .modal {
+        .close {
+            filter: brightness(100%);
+        }
     }
 }

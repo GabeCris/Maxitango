@@ -2,17 +2,41 @@
 @import "./variables";
 
 .footer{
+    background-color: $theme-background;
     &__container{
         background-color: $blue;
         @include centralize($direction: row, $justify: space-around);
         padding: 0px $padding 32px $padding;
+        @include mobile{
+            padding: 1.6rem $padding_mobile;
+            @include centralize($direction: column-reverse, $justify: space-around);
+            gap: 3.6rem;
+        }
+        @include tablet{
+            padding: 1.6rem $padding_tablet;
+            @include centralize($direction: column-reverse, $justify: center);
+            gap: 3.6rem;
+        }
     }
     &__title{
         color: $white !important;
+        @include mobile{
+            font-size: 2.4rem;
+        }
+        @include tablet{
+            font-size: 2.8rem;
+        }
     }
     &__contacts{
         @include centralize($direction: column);
         gap: 16px;
+        margin-left: 48px;
+        @include mobile{
+            margin-left: 0;
+        }
+        @include tablet{
+            margin-left: 0;
+        }
     }
     &__icons{
         @include centralize($direction: row);
@@ -20,5 +44,21 @@
     }
     &__icon{
         @include icon;
+        @include mobile{
+            width: 48px;
+        }
+        @include tablet{
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+    }
+
+    &__logo{
+        @include mobile{
+            width: 16.8rem;
+        }
+        @include tablet{
+            width: 19.6rem;
+        }
     }
 }

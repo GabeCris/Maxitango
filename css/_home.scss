@@ -1,7 +1,14 @@
 @import "./mixins";
 @import "./variables";
 
+.bottom-mobile {
+    display: none;
+}
+
 .header {
+    @include mobile {
+        height: 4.8rem;
+    }
     @include centralize($justify: space-around);
     background-color: $blue;
     width: 100%;
@@ -13,11 +20,29 @@
         ul {
             @include centralize;
             gap: calc(64px - 10px);
+            @include mobile {
+                display: none;
+            }
+            @include tablet {
+                display: none;
+            }
+            @media (max-width: 880px) {
+                gap: 32px;
+            }
             font-size: $text;
             list-style-type: none;
-            li{
+            li {
                 position: relative;
                 @include item;
+                label {
+                    cursor: pointer;
+                    @include centralize;
+                }
+                &:last-child {
+                    &::before {
+                        content: none;
+                    }
+                }
             }
         }
     }
@@ -27,8 +52,26 @@
         transition: 0.4s;
         padding-left: 10px;
     }
-    &__logo{
+    &__logo {
+        @include centralize;
         cursor: pointer;
+        max-width: 287px;
+        width: 100%;
+        @include mobile {
+            width: 14.8rem;
+        }
+    }
+    &__hamburger {
+        cursor: pointer;
+        display: none;
+        @include mobile {
+            display: block;
+            width: 36px;
+        }
+        @include tablet {
+            display: block;
+            width: 36px;
+        }
     }
 }
 
@@ -36,19 +79,52 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    @include mobile {
+        .bottom-mobile {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom {
+            display: none;
+        }
+    }
 }
 
 .hero {
     width: 100%;
     height: 100%;
     padding: 0 $padding;
-    background: url(../assets/background.svg) no-repeat center;
+    background-image: url(../assets/background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     @include centralize(flex-start);
+    @media (max-width: 880px) {
+        @include centralize(center);
+    }
+    @include tablet{
+        padding: 0 $padding_tablet;
+    }
+    @include mobile {
+        padding: 0 $padding_mobile;
+        background-position-x: 40%;
+        background-image: url(../assets/background-mobile.svg);
+        background-attachment: scroll;
+    }
     &__title {
         width: 45rem;
         h1 {
+            @include tablet{
+                font-size: 4.2rem;
+                line-height: 5rem;    
+            }
+            @include mobile {
+                font-size: 3.6rem;
+                line-height: 4rem;
+            }
             text-transform: uppercase;
             font-weight: 900;
             font-size: 4.8rem;
@@ -66,8 +142,16 @@
         @include icon;
         position: relative;
         z-index: 3;
+        @include tablet{
+            width: 5.6rem;
+            height: 5.6rem;
+        }
+        @include mobile {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
     }
-    &__icon__container{
+    &__icon__container {
         @include centralize($direction: column);
         gap: 8px;
         // width: 64px;
@@ -78,7 +162,7 @@
     }
 }
 
-.bottom{
+.bottom {
     position: absolute;
     bottom: 0;
     width: 100%;

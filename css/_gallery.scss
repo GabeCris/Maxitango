@@ -9,21 +9,58 @@ $square: 285px;
     position: relative;
     z-index: 5;
     padding: 9.6rem;
+    background-color: $theme-background;
+    @include mobile {
+        padding: 48px $padding_mobile;
+        scroll-margin-top: 16px;
+    }
+    @include tablet{
+        scroll-margin-top: 32px;
+        padding: 48px $padding_tablet;
+    }
     &__text {
         margin: 64px 0 16px 0;
         max-width: 850px;
         width: 100%;
+        @include mobile {
+            margin-top: 2.4rem;
+        }
+        @include tablet{
+            margin-top: 2.4rem;
+        }
     }
     &__container {
         padding: 0 96px 0px 96px;
         margin-top: 64px;
-
+        @include mobile {
+            margin-top: 36px;
+            padding: 0 0;
+        }
     }
     .parent {
         display: grid;
         grid-template-columns: repeat(4, (285px / 1.5));
         grid-template-rows: repeat(3, (285px / 1.5));
         gap: 16px;
+        justify-items: center;
+        align-items: center;
+        @media (max-width: 880px){
+            grid-template-columns: repeat(4, (285px / 2));
+            grid-template-rows: repeat(3, (285px / 2));
+            gap: 8px;
+        }
+        @include tablet{
+            grid-template-columns: repeat(3, (285px / 1.8));
+            grid-template-rows: repeat(3, (285px / 1.8));
+            gap: 8px;
+            
+        }
+        @include mobile {
+            // display: none;
+            grid-template-columns: repeat(3, (285px / 3));
+            grid-template-rows: repeat(3, (285px / 3));
+            gap: 8px;
+        }
         .img {
             width: 100%;
             cursor: pointer;
@@ -31,7 +68,8 @@ $square: 285px;
             // object-fit: cover;
             border-radius: 20px;
             transition: $transition;
-            &:hover{
+            &:hover {
+                border-radius: 10px;
                 transition: $transition;
                 transform: scale(1.02);
             }
@@ -45,6 +83,9 @@ $square: 285px;
         grid-area: 1 / 2 / 2 / 4;
     }
     .image3 {
+        @include mobile {
+            display: none;
+        }
         grid-area: 1 / 4 / 2 / 5;
     }
     .image4 {
@@ -60,9 +101,15 @@ $square: 285px;
         grid-area: 2 / 3 / 4 / 4;
     }
     .image8 {
+        @include mobile {
+            display: none;
+        }
         grid-area: 2 / 4 / 3 / 5;
     }
     .image9 {
+        @include mobile {
+            display: none;
+        }
         grid-area: 3 / 4 / 4 / 5;
     }
 }

@@ -1,10 +1,20 @@
 @import "./mixins";
 @import "./variables";
 
-
 .history {
     @include centralize($direction: column);
-    padding: 9.6rem 0; 
+    padding: 9.6rem 0;
+    background-color: $theme-background;
+    @include mobile {
+        scroll-margin-top: -16px;
+        padding: 4.8rem $padding_mobile;
+        padding-top: calc(4.8rem + 32px);
+    }
+    @include tablet{
+        padding: 4.8rem $padding_tablet;
+        padding-top: calc(4.8rem + 32px);
+        
+    }
     &__timeline {
         margin-top: 64px;
         @include centralize($direction: column);
@@ -12,43 +22,107 @@
         width: calc(930px + 40px);
         position: relative;
         align-items: flex-start;
+        @media (max-width: 1032px) {
+            width: calc(970px - 150px);
+        }
+        @media (max-width: 880px) {
+            width: calc(970px - 310px);
+            gap: 0px;
+        }
+        @include mobile {
+            margin-top: 2.4rem;
+            width: 100%;
+            gap: 16px;
+        }
+        @include tablet{
+            width: 100%;
+            gap: 16px;
+            margin-top: 2.4rem;
+        }
     }
     &__text {
         font-size: 1.6rem !important;
         line-height: 22px !important;
         width: calc(335px + (40px / 2));
+        @media (max-width: 1032px) {
+            width: 280px;
+        }
+        @media (max-width: 880px) {
+            width: 200px;
+        }
+        @include mobile{
+            width: 100%;
+            line-height: 15px !important;
+            font-size: 1.2rem !important;
+        }
     }
     &__card-odd {
         @include centralize;
         justify-content: flex-end;
+        @include mobile{
+            justify-content: flex-start;
+        }
+        @include tablet{
+            justify-content: flex-start;
+        }
         .history__date {
             @include centralize($direction: row-reverse);
         }
         .text {
             text-align: left;
             padding-left: 18px;
+            @include mobile{
+                padding-left: 8px;
+            }
+            @include tablet{
+                padding-left: 8px;
+                width: 100%;
+            }
+
         }
         .history__year {
             &::after {
                 left: -30px;
+                @include mobile{
+                    left: 0px;
+                }
             }
         }
-        .translate{
+        .translate {
             &::after {
                 left: -25px;
                 width: 17px;
+               
             }
         }
     }
     &__card-even {
         @include centralize;
         justify-content: flex-start;
+       
         .history__date {
             @include centralize($direction: row);
+            @include mobile {
+                @include centralize($direction: row-reverse);
+            }
+            @include tablet{
+                @include centralize($direction: row-reverse);
+            }
         }
         .text {
             text-align: right;
             padding-right: 18px;
+            @include mobile{
+                text-align:left;
+                padding-right: 0;
+                padding-left: 6px;
+            }
+            @include tablet{
+                width: 100%;
+                text-align:left;
+                padding-right: 0;
+                padding-left: 6px;
+            }
         }
     }
     &__year {
@@ -60,6 +134,14 @@
         font-family: $poppins;
         font-weight: 500;
         position: relative;
+        @include mobile{
+            font-size: 1.6rem;
+            padding: 6px 12px;
+        }
+        @include tablet{
+            font-size: 1.6rem;
+            padding: 6px 12px;
+        }
         &::after {
             content: "";
             width: 20px;
@@ -69,6 +151,12 @@
             right: -30px;
             background-color: $blue;
             position: absolute;
+            @include mobile{
+                display: none;
+            }
+            @include tablet{
+                display: none;
+            }
         }
     }
 }
@@ -84,4 +172,10 @@
     width: 5px;
     height: 100%;
     background-color: $blue;
+    @include mobile {
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
 }
