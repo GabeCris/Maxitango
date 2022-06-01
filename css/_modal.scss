@@ -72,7 +72,7 @@
             $translate: -15px
             );
             @include mobile{
-                width: 90%;
+                width: 80%;
                 height: 450px;
                 @include card_title(
                     $font-size: 1.6rem,$bottom: false,

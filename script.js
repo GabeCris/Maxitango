@@ -25,7 +25,10 @@ const mapsArray = [
     },
 ];
 
-const rellax = new Rellax(".rellax");
+if(window.innerWidth > 760){
+    const rellax = new Rellax(".rellax");
+}
+
 const revealGallery = document.querySelectorAll(".gallery__container");
 const revealShops = document.querySelectorAll(".shops__card");
 const revealDates = document.querySelectorAll(".history__date");
@@ -99,4 +102,5 @@ check.addEventListener("click", () => {
 ScrollReveal({ reset: true, delay: 100, duration: 700 });
 ScrollReveal().reveal(revealShops);
 ScrollReveal().reveal(revealDates);
+
 ScrollReveal().reveal(revealGallery);
